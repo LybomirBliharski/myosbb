@@ -42,6 +42,7 @@
             <artifactId>spring-boot-starter-data-jpa</artifactId>
             <version>${spring-boot.version}</version>
         </dependency>
+        
         <!-- JUnit -->
         <dependency>
             <groupId>junit</groupId>
@@ -49,6 +50,7 @@
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
+        
         <!-- For file uploading -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -64,7 +66,6 @@
     <profiles>
        <profile>
             <id>main</id>
-
             <build>
                 <plugins>
                     <plugin>
@@ -85,17 +86,11 @@
             </properties>
         </profile>
 
-
-
         <profile>
             <id>mariadb</id>
-
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
-
-          
-
             <build>
                 <plugins>
                     <plugin>
@@ -114,7 +109,6 @@
                 <db.username>root</db.username>
                 <db.password>root</db.password>
             </properties>
-
         </profile>
 
         <profile>
@@ -132,10 +126,10 @@
                 </plugins>
             </build>
             <properties>
-                <db.driver>org.postgresql.Driver</db.driver>
-                <db.connectionURL>jdbc:postgresql://localhost:5432/myosbb</db.connectionURL>
-                <db.username>postgres</db.username>
-                <db.password>noddod1491</db.password>
+                <db.driver>org.mariadb.jdbc.Driver</db.driver>
+                <db.connectionURL>jdbc:mariadb://127.0.0.1:1100/myosbb</db.connectionURL>
+                <db.username>root</db.username>
+                <db.password>root</db.password>
             </properties>
         </profile>
 
