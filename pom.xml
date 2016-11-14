@@ -126,10 +126,10 @@
                 </plugins>
             </build>
             <properties>
-                <db.driver>org.mariadb.jdbc.Driver</db.driver>
-                <db.connectionURL>jdbc:mariadb://127.0.0.1:1100/myosbb</db.connectionURL>
-                <db.username>root</db.username>
-                <db.password>root</db.password>
+                <db.driver>org.postgresql.Driver</db.driver>
+                <db.connectionURL>jdbc:postgresql://localhost:5432/myosbb</db.connectionURL>
+                <db.username>postgres</db.username>
+                <db.password>postgres</db.password>
             </properties>
         </profile>
 
